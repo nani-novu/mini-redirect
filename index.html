@@ -1,50 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Loading...</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      flex-direction: column;
-      text-align: center;
-    }
-    .loader {
-      width: 50px;
-      height: 50px;
-      border: 5px solid #fff;
-      border-top: 5px solid #f00;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin-bottom: 15px;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join WhatsApp Group</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!--<script>
+        let shareCount = 0;
+
+        // Function to show the "Share" button and hide "Join Chat"
+        function showShareButton() {
+            const joinChatButton = document.querySelector('.join-btn');
+            const shareSection = document.getElementById('share-section');
+            const greyLine = document.querySelector('.grey-line');
+            const downloadMessage = document.querySelector('.download-message');
+
+            joinChatButton.style.display = 'none';
+            shareSection.style.display = 'block';
+
+            if (greyLine) greyLine.remove();
+            if (downloadMessage) downloadMessage.remove();
+        }
+
+        // Function to handle WhatsApp sharing
+        function shareOnWhatsApp() {
+            shareCount++;
+            if (shareCount >= 5) {
+                const joinGroupBtn = document.getElementById('join-group-btn');
+                joinGroupBtn.disabled = false;
+                joinGroupBtn.classList.add('active');
+
+                document.getElementById('share-btn').style.display = 'none';
+                document.querySelector('.share-instructions').style.display = 'none';
+                document.querySelector('.activate-instructions').style.display = 'none';
+            }
+
+            const url = "https://wa.me/?text=💦Join%20the%20best%20Sugar%20Mummy%20Telegram%20Chat%20Room💦%0A%0A🌟African%20Sugar%20Mummies%20✅%0A🌟European%20Sugar%20Mummies%20✅%0A🌟American%20Sugar%20Mummies%20✅%0A🌟Australian%20Sugar%20Mummies%20✅%0A%0ARules%3A%0A1.%20You%20must%20be%2018%2B%20Years%0A2.%20No%20abuses%20allowed%0A3.%20Share%20with%203%20Groups%20before%20Joining%0A%0A%20%20Link:%20https://chat.whhotsapp.com/";
+            window.open(url, '_blank');
+        }
+
+        // Change content based on selected language
+        function changeLanguage() {
+            const language = document.getElementById('languageDropdown').value;
+
+            const texts = {
+                en: {
+                    groupTitle: "💦🔞 Sugar Mummy Chat Room Group1 🔞💦",
+                    invitationText: "Invitation to WhatsApp Group",
+                    joinChatBtn: "Join Chat",
+                    shareInstructions: "You must be an active user of WhatsApp to join this Group and share to 5 Groups",
+                    shareBtn: "Share",
+                    activateInstructions: "Complete the process of sharing in 5 Groups and the button below will activate to join the Group.",
+                    joinGroupBtn: "Join Group",
+                    downloadMessage: "You don't have WhatsApp yet?",
+                    downloadText: "Download"
+                },
+                sw: {
+                    groupTitle: "💦🔞 Chumba cha Mazungumzo cha Sugar Mummy Group1 🔞💦",
+                    invitationText: "Mwito wa Kujiunga na Kikundi cha WhatsApp",
+                    joinChatBtn: "Jiunge na Chat",
+                    shareInstructions: "Lazima uwe mtumiaji hai wa WhatsApp ili kujiunga na Kikundi hiki na kushiriki kwa Vikundi 3",
+                    shareBtn: "Shiriki",
+                    activateInstructions: "Kamilisha mchakato wa kushiriki kwa Vikundi 3 na kifungo kilicho chini kitafunguliwa kujiunga na Kikundi.",
+                    joinGroupBtn: "Jiunge na Kikundi",
+                    downloadMessage: "Huna WhatsApp bado?",
+                    downloadText: "Pakua"
+                },
+                zh: {
+                    groupTitle: "💦🔞 糖妈聊天群组1 🔞💦",
+                    invitationText: "邀请加入WhatsApp群组",
+                    joinChatBtn: "加入聊天",
+                    shareInstructions: "你必须是WhatsApp的活跃用户，才能加入此群并分享至3个群组",
+                    shareBtn: "分享",
+                    activateInstructions: "完成在3个群组的分享，下面的按钮将启用以加入该群组。",
+                    joinGroupBtn: "加入群组",
+                    downloadMessage: "还没有WhatsApp？",
+                    downloadText: "下载"
+                },
+                ja: {
+                    groupTitle: "💦🔞 シュガーマミーチャットルームグループ1 🔞💦",
+                    invitationText: "WhatsAppグループへの招待",
+                    joinChatBtn: "チャットに参加",
+                    shareInstructions: "WhatsAppのアクティブユーザーである必要があり、このグループに参加して3つのグループに共有してください",
+                    shareBtn: "共有",
+                    activateInstructions: "3つのグループに共有するプロセスを完了すると、下のボタンでグループに参加できるようになります。",
+                    joinGroupBtn: "グループに参加",
+                    downloadMessage: "WhatsAppをまだ持っていませんか？",
+                    downloadText: "ダウンロード"
+                }
+            };
+
+            const selectedTexts = texts[language];
+
+            document.querySelector('.group-title').textContent = selectedTexts.groupTitle;
+            document.querySelector('.invitation-text').textContent = selectedTexts.invitationText;
+            document.querySelector('.join-btn').textContent = selectedTexts.joinChatBtn;
+            document.querySelector('.share-instructions').textContent = selectedTexts.shareInstructions;
+            document.querySelector('.share-btn').textContent = selectedTexts.shareBtn;
+            document.querySelector('.activate-instructions').textContent = selectedTexts.activateInstructions;
+            document.querySelector('.join-group-btn').textContent = selectedTexts.joinGroupBtn;
+            document.querySelector('.download-message').innerHTML = selectedTexts.downloadMessage + "<br><span class='download-text'>" + selectedTexts.downloadText + "</span>";
+        }
+
+        // Trigger change language on load
+        window.onload = changeLanguage;
+    </script>-->
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0B8DDPJSN3"></script>
+   <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+
+       gtag('config', 'G-0B8DDPJSN3');
+   </script>
 </head>
 <body>
-  <div class="loader"></div>
-  <p>Loading, please wait...</p>
 
-  <script>
-    // Your direct link (DL)
-    const dl = "https://ey43.com/4/10182276";
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo-section">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" class="whatsapp-logo">
+            <span class="whatsapp-name">WhatsApp</span>
+        </div>
+        <div class="language-section">
+            <select class="language-dropdown" id="languageDropdown" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="sw">Swahili</option>
+                <option value="zh">Chinese</option>
+                <option value="ja">Japanese</option>
+            </select>
+        </div>
+    </header>
 
-    // Redirect after 1 seconds
-    setTimeout(() => {
-      window.location.href = dl;
-    }, 500);
-  </script>
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Profile Pictures Section -->
+        <div class="profile-pics">
+            <div class="profile-pic">
+                <img src="assets/img/nairobi-sugar-mummy.jpg" alt="girl9">
+            </div>
+        </div>
+
+        <!-- Group Information -->
+        <h2 class="group-title">💦🔞 Sugar Mummy Chat Room Group1 🔞💦</h2>
+        <p class="invitation-text">Invitation to WhatsApp Group</p>
+
+        <!-- Join Chat Button -->
+        <button onclick="showShareButton()" class="join-btn">Join Chat</button>
+
+        <!-- Grey Line Below the Join Chat Button -->
+        <hr class="grey-line">
+
+        <!-- Download Message -->
+        <p class="download-message">You don't have WhatsApp yet?<br><span class="download-text">Download</span></p>
+
+        <!-- Share Section -->
+        <div id="share-section" style="display: none; margin-top: 20px; text-align: center;">
+            <p class="share-instructions">You must be an active user of WhatsApp to join this Group and share to 3 Groups</p>
+            <button id="share-btn" onclick="shareOnWhatsApp()" class="share-btn">Share</button>
+            <p class="activate-instructions">Complete the process of sharing in 3 Groups and the button below will activate to join the Group.</p>
+            <button id="join-group-btn" class="join-group-btn" disabled onclick="window.location.href='https://www.tamuporn.com/'">Join Group</button>
+        </div>
+    </div>
+<script src="assets/js/script.js"></script>
 </body>
 </html>
