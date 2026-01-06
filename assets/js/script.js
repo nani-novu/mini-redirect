@@ -146,7 +146,7 @@ Rules:
 2. No abuses allowed
 3. Share with 5 Groups before Joining
 
-  Link: https://girlshouse.xyz/`);
+  Link: https://girlshouse.xyz`);
     
     const whatsappUrl = `https://wa.me/?text=${message}`;
     window.open(whatsappUrl, '_blank');
