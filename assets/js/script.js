@@ -7,7 +7,7 @@ const texts = {
         groupTitle: "💦🔞 Sugar Mummy Chat Room Group1 🔞💦",
         invitationText: "Invitation to WhatsApp Group",
         joinChatBtn: "Join Chat",
-        shareInstructions: "You must be an active user of WhatsApp to join this Group. Share to 5 groups to verify.",
+        shareInstructions: "You must be an active user of WhatsApp to join this Group. Share to 2 groups to verify.",
         shareBtn: "Share",
         activateInstructions: "Complete the sharing process to unlock the Join button.",
         joinGroupBtn: "Join Group",
@@ -19,7 +19,7 @@ const texts = {
         groupTitle: "💦🔞 Chumba cha Mazungumzo cha Sugar Mummy Group1 🔞💦",
         invitationText: "Mwito wa Kujiunga na Kikundi cha WhatsApp",
         joinChatBtn: "Jiunge na Chat",
-        shareInstructions: "Lazima uwe mtumiaji hai wa WhatsApp ili kujiunga. Shiriki kwa vikundi 5 kuthibitisha.",
+        shareInstructions: "Lazima uwe mtumiaji hai wa WhatsApp ili kujiunga. Shiriki kwa vikundi 2 kuthibitisha.",
         shareBtn: "Shiriki",
         activateInstructions: "Kamilisha mchakato wa kushiriki ili kufungua kitufe cha kujiunga.",
         joinGroupBtn: "Jiunge na Kikundi",
@@ -43,7 +43,7 @@ const texts = {
         groupTitle: "💦🔞 シュガーマミーチャットルームグループ1 🔞💦",
         invitationText: "WhatsAppグループへの招待",
         joinChatBtn: "チャットに参加",
-        shareInstructions: "WhatsAppのアクティブユーザーである必要があります。5つのグループに共有して確認してください。",
+        shareInstructions: "WhatsAppのアクティブユーザーである必要があります。2つのグループに共有して確認してください。",
         shareBtn: "共有",
         activateInstructions: "共有プロセスを完了して、参加ボタンのロックを解除してください。",
         joinGroupBtn: "グループに参加",
@@ -144,7 +144,7 @@ function shareOnWhatsApp() {
 Rules:
 1. You must be 18+ Years
 2. No abuses allowed
-3. Share with 5 Groups before Joining
+3. Share with 2 Groups before Joining
 
   Link: https://girlshouse.xyz`);
     
