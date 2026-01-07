@@ -1,5 +1,5 @@
 let shareCount = 0;
-const MAX_SHARES = 5;
+const MAX_SHARES = 2;
 
 // Translation Data
 const texts = {
